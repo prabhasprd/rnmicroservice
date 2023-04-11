@@ -11,7 +11,7 @@ const HomeScreen = (props: any) => {
         flex: 1,
         alignSelf: 'center',
       }}>
-      <Text>App</Text>
+      <Text>Home Screen</Text>
       <TouchableOpacity
         onPress={onHandleSwitch}
         style={{
@@ -25,7 +25,7 @@ const HomeScreen = (props: any) => {
         }}>
         <Text>Close Micro App</Text>
       </TouchableOpacity>
-      <Text>Home Screen</Text>
+      <Text>Home Screen sub</Text>
     </SafeAreaView>
   );
 };

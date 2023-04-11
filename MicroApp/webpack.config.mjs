@@ -238,6 +238,7 @@ export default env => {
         name: 'MicroApp',
         exposes: {
           './App': './App.tsx',
+          './HomeScreen': './screens/homescreen/index.tsx',
         },
         shared: {
           react: {
@@ -247,7 +248,7 @@ export default env => {
           'react-native': {
             ...Repack.Federated.SHARED_REACT_NATIVE,
             eager: STANDALONE, // to be figured out
-            requiredVersion: '0.71.3',
+            requiredVersion: '0.71.6',
           },
         },
       }),

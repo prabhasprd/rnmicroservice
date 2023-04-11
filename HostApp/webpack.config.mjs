@@ -244,7 +244,7 @@ export default env => {
           },
           'react-native': {
             ...Repack.Federated.SHARED_REACT_NATIVE,
-            requiredVersion: '0.71.3',
+            requiredVersion: '0.71.6',
           },
         },
       }),
