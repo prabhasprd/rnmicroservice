@@ -4,11 +4,15 @@
   "scripts": {
     "bootstrap": "yarn --cwd HostApp && yarn --cwd MicroApp",
     "pod-install": "cd HostApp/ios/ && arch -x86_64 pod install && cd ../../MicroApp/ios/ && arch -x86_64 pod install",
-    "start:app1": "yarn --cwd MicroApp start",
+    "start:microApp": "yarn --cwd MicroApp start",
     "start:host": "yarn --cwd HostApp start",
+    "start:all": "concurrently \"yarn start:host\" \"yarn start:microApp\"",
     "run:host:ios": "yarn --cwd HostApp ios",
     "run:host:android": "yarn --cwd HostApp android",
-    "run:app1:ios": "STANDALONE=1 yarn --cwd MicroApp ios",
-    "run:app1:android": "STANDALONE=1 yarn --cwd MicroApp android"
+    "run:microApp:ios": "STANDALONE=1 yarn --cwd MicroApp ios",
+    "run:microApp:android": "STANDALONE=1 yarn --cwd MicroApp android"
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.2"
   }
 }
